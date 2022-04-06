@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinIODemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.text.image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="79A-kw-pTs">
+                                <rect key="frame" x="87" y="140" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="EsI-w8-QQ4"/>
+                                    <constraint firstAttribute="height" constant="240" id="m1g-8J-Xjv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7W-ch-fkL">
+                                <rect key="frame" x="87" y="410" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="WLK-Wg-9qw"/>
+                                    <constraint firstAttribute="height" constant="40" id="zrU-Ql-cpl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UPLOAD"/>
+                                <connections>
+                                    <action selector="btnUploadClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQb-7I-xGh"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww5-ek-NkX">
+                                <rect key="frame" x="87" y="732" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="SHC-qF-OV1"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yw9-Eg-vwh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SHOW UPLOADED IMAGE"/>
+                                <connections>
+                                    <action selector="btnShowImageClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNp-o8-3rv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ww5-ek-NkX" secondAttribute="bottom" constant="90" id="0BW-Xy-kgF"/>
+                            <constraint firstItem="M7W-ch-fkL" firstAttribute="top" secondItem="79A-kw-pTs" secondAttribute="bottom" constant="30" id="Jd9-yy-9qW"/>
+                            <constraint firstItem="79A-kw-pTs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R6M-wx-tal"/>
+                            <constraint firstItem="79A-kw-pTs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="ag3-kE-wse"/>
+                            <constraint firstItem="ww5-ek-NkX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tYZ-tq-8c2"/>
+                            <constraint firstItem="M7W-ch-fkL" firstAttribute="centerX" secondItem="79A-kw-pTs" secondAttribute="centerX" id="xBw-s2-TXn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivMinIO" destination="79A-kw-pTs" id="p2t-uL-8p6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.20289855072468" y="93.080357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.image" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
